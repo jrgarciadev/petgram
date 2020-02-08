@@ -1,11 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import { PhotoCard } from "../PhotoCard"
 
-export const ListOfPhotoCards = () => {
+export const ListOfPhotoCardsComponent = ({
+  data: { photos = [], loading = false }
+} = {}) => {
+  console.log(loading)
   return (
     <ul>
-      {[1, 2, 3].map((id) => (
-        <PhotoCard key={id} />
+      {photos.map((photo) => (
+        <PhotoCard key={photo.id} {...photo} loading={loading} />
       ))}
     </ul>
   )
