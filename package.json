@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack",
-        "dev": "webpack-dev-server",
+        "dev": "webpack-dev-server --history-api-fallback",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -38,6 +38,7 @@
         "wepack-cli": "^0.0.1-security"
     },
     "dependencies": {
+        "@reach/router": "^1.3.1",
         "apollo-boost": "^0.4.7",
         "graphql": "^14.6.0",
         "intersection-observer": "^0.7.0",

@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react"
-import { Article, ImgWrapper, Img, Button } from "./styles"
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md"
+import { Article, ImgWrapper, Img } from "./styles"
 import { useLocalStorage } from "../../hooks/useLocalStorage"
 import { useNearScreen } from "../../hooks/useNearScreen"
 import ReactPlaceholder from "react-placeholder"
 import { TextBlock, RectShape, RoundShape } from "react-placeholder/lib/placeholders"
+import { FavButton } from "../FavButton"
+import { ToggleLikeMutation } from "../../container/ToggleLikeMutation"
 
 const DEFAULT_IMAGE =
   "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
@@ -19,7 +20,6 @@ export const PhotoCard = ({
   const [show, element] = useNearScreen()
   const key = `like-${id}`
   const [liked, setLiked] = useLocalStorage(key, false)
-  const Icon = liked ? MdFavorite : MdFavoriteBorder
 
   const photoCardSkeleton = (
     <React.Fragment>
@@ -54,9 +54,22 @@ export const PhotoCard = ({
                 <Img src={src} />
               </ImgWrapper>
             </a>
-            <Button onClick={() => setLiked(!liked)}>
-              <Icon size="32px" /> {likes} likes!
-            </Button>
+            <ToggleLikeMutation>
+              {(toggleLike) => {
+                const handleFavClick = () => {
+                  !liked &&
+                    toggleLike({
+                      variables: {
+                        input: { id }
+                      }
+                    }) // If not liked the photo
+                  setLiked(!liked)
+                }
+                return (
+                  <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
+                )
+              }}
+            </ToggleLikeMutation>
           </React.Fragment>
         </ReactPlaceholder>
       )}
