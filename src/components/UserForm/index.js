@@ -7,12 +7,9 @@ export const UserForm = ({ onSubmit }) => {
   const password = useInputValue("")
 
   return (
-    <form onSubmit={}>
+    <form onSubmit={onSubmit}>
       <input
         placeholder="Email"
-
-
-
         {...email}
         // value={email.value}
         // onChange={email.onChange}
