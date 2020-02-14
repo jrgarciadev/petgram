@@ -2,13 +2,13 @@ import React from "react"
 import { Logo } from "../Logo"
 import { HeaderContainer } from "./styles"
 import { MdCameraAlt, MdComment } from "react-icons/md"
-const SIZE = "32px"
+const SIZE = "28px"
 export const Header = () => {
   return (
     <HeaderContainer>
-      <MdCameraAlt size={SIZE} />
+      <MdCameraAlt color={"#888"} size={SIZE} />
       <Logo />
-      <MdComment size={SIZE} />
+      <MdComment color={"#888"} size={SIZE} />
     </HeaderContainer>
   )
 }

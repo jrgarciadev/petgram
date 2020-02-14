@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #fafafa;
     border: 1px solid #dbdbdb;
     padding: 10px;
+    margin: 10px 0;
     border-radius: 3px;
     color: #262626;
     display: flex;
@@ -36,7 +37,8 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     align-items:center;
     &:focus {
-      border: 1px solid #b2b2b2 !important
+      outline: none;
+      border: 1px solid #b2b2b2;
     }
   }
 

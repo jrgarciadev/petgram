@@ -6,8 +6,8 @@ export const Logo = (props) => {
   return (
     <Link to="/">
       <Svg
-        width={385.5}
-        height={122.021}
+        width={365.5}
+        height={102.021}
         viewBox="57.25 13.989 385.5 122.021"
         style={{
           background: "transparent"
