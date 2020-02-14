@@ -17,7 +17,11 @@ const scale = ({ time = "0.6s", type = "ease" } = {}) =>
 export const List = styled.ul`
   display: flex;
   overflow: scroll;
+  background: #fafafa;
+  border-bottom: 1px solid #dbdbdb;
   width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
   ${(props) =>
     props.fixed &&
     css`
@@ -30,6 +34,8 @@ export const List = styled.ul`
         right: 0;
         top: -20px;
         margin: 0 auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
         max-width: 400px;
         padding: 5px;
         position: fixed;

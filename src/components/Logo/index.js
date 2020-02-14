@@ -10,7 +10,7 @@ export const Logo = (props) => {
         height={122.021}
         viewBox="57.25 13.989 385.5 122.021"
         style={{
-          background: "#fff"
+          background: "transparent"
         }}
         preserveAspectRatio="xMidYMid"
         {...props}

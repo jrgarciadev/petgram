@@ -23,6 +23,23 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%; 
   }
 
+  input {
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+    border-radius: 3px;
+    color: #262626;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    align-items:center;
+    &:focus {
+      border: 1px solid #b2b2b2 !important
+    }
+  }
+
   #app {
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     overflow-x: hidden;
