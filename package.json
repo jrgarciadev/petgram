@@ -4,6 +4,7 @@
     "description": "Pets Social Network!",
     "main": "index.js",
     "scripts": {
+        "now-build": "npm run build",
         "build": "webpack",
         "dev": "webpack-dev-server --history-api-fallback",
         "test": "echo \"Error: no test specified\" && exit 1"
