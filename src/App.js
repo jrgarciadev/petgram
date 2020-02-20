@@ -7,7 +7,7 @@ import { Favs } from "./pages/Favs"
 import { User } from "./pages/User"
 import { NotRegisteredUser } from "./pages/NotRegisteredUser"
 import { Router } from "@reach/router"
-import { NavBar } from "./components/Navbar"
+import { NavBar } from "./components/NavBar"
 import Context from "./Context"
 
 // const UserLogged = ({ children }) => {
