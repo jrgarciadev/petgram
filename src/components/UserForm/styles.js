@@ -27,6 +27,9 @@ export const Button = styled.button`
   width: 100%;
   font-size: 14px;
   font-weight: 500;
+  &[disabled] {
+    opacity: 0.3;
+  }
 `
 
 export const RegisterContainer = styled.div`
@@ -41,4 +44,19 @@ export const Link = styled(LinkRouter)`
   color: #3897f0;
   font-weight: 500;
   text-decoration: none;
+`
+
+export const ErrorMsg = styled.span`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  bottom: 60px;
+  left: 10px;
+  height: 40px;
+  right: 10px;
+  border-radius: 3px;
+  background-color: #ed4a6b;
+  color: white;
+  font-size: 14px;
 `

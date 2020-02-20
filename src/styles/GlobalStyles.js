@@ -40,6 +40,9 @@ export const GlobalStyle = createGlobalStyle`
       outline: none;
       border: 1px solid #b2b2b2;
     }
+    &[disabled] {
+      opacity: 0.3;
+    }
   }
 
   #app {
