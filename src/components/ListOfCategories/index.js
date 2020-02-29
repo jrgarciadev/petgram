@@ -17,7 +17,7 @@ const useCategoriesData = () => {
   return { categories, loading }
 }
 
-export const ListOfCategories = () => {
+const ListOfCategoriesComponent = () => {
   const { categories, loading } = useCategoriesData()
   const [showFixed, setShowFixed] = useState(false)
 
@@ -48,3 +48,6 @@ export const ListOfCategories = () => {
     </React.Fragment>
   )
 }
+
+// React memo evita que el component no se redenrice de nuevo si las props no cambian
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)
